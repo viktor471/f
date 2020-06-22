@@ -2,14 +2,9 @@
 #include <stdlib.h>
 
 int main(){
-	printf("int arr[2][3] = { {2, 8, 4}, {5, 6, 7} }\n\n");
-	printf("[2][8][4]\n[5][6][7]\n\n");
 	int arr[2][3] = { {2, 8, 4}, {5, 6, 7} };
-	printf("*pointer = arr\n");
 	int *pointer = arr;
 	
-	printf("++pointer[0]: %d\n\n", ++pointer[0]);
-
 // создание и заполнение тройного динамического 
 // числами
 	int **ptr = (int**)malloc(sizeof(int*)*2);
@@ -24,7 +19,6 @@ int main(){
 	}
 // -------- конец заполнения
 
- printf("динамический двойной массив 3x3 ptr\n с таким содержимым:\n\n");
 
  for(int i = 0; i < 3; i++)
  {
@@ -39,7 +33,7 @@ int main(){
  ptr[0]++;
  printf("ptr[0]++\n");
  printf("адрес 2эл 1 строки: ptr[0] %p\n", ptr[0]);
- printf("ptr[0][0]: %d\n\n", ptr[0][0]);
+ printf("ptr[0][-1]: %d\n\n", ptr[0][-1]);
 
  pointer = arr[1];
  printf("pointer = arr[2]\n");
